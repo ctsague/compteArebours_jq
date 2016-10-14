@@ -1,0 +1,23 @@
+.center {
+	text-align: center;
+}
+
+
+.main {
+	border : solid gray 2px;
+}
+.count {
+	font-size: 200px;
+	margin: 100px;
+	color: red;
+	
+}
+
+span {
+	font-size: 200px;
+	color: red;
+	text-align: center;
+}
+.btn {
+	text-align: center;
+}
