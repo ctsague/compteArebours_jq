@@ -1,42 +1,33 @@
-
+//saisiMinutes = $("#input1").val();
+var saisiSecondes = parseInt($("#input2").val(),10);
+	
 function compteur(){
-	timer--;
-	var minutes = parseInt(timer/60, 10);
-	var secondes = (timer - minutes*60);
-
+	saisiSecondes--;
+	var minutes = parseInt(saisiSecondes/60, 10);
+	var secondes = (saisiSecondes % 60);
 	$('#minutes').text(minutes);	
 	$('#secondes').text(secondes);	
-	if(timer==0){
+	if(saisiSecondes <= 0){
 		clearInterval(compte);
 		}
 }
 
-var timer=30;
 var compte =setInterval(compteur, 1000);
 
-$('.stop').click(function(){
+$('.start').on('click',function(){
+	compte = setInterval(compteur, 1000);
+	if (saisiSecondes <= 0 ){
+	saisiSecondes=$("#input2").val();
+	}
+});
+
+$('.stop').on('click',function(){
 	clearInterval(compte);
 });
 
-$('.play').click(function(){
-compte =setInterval(compteur, 1000);
-
+$('.reset').on('click',function(){
+	saisiSecondes=$("#input2").val();
+	
 });
 
 
-$('.reset').click(function(){
-timer=30;
-//compte =setInterval(compteur, 1000);
-
-});
-
-
-
-// $(':button').click(function () {
-//     if (this.id == 'stop') {
-//         alert('Button stop was clicked');
-//     }
-//     else if (this.id == 'start') {
-//         alert('Button start was clicked');
-//     }
-// });
