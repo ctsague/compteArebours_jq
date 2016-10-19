@@ -1,4 +1,4 @@
-.center {
+body {
 	text-align: center;
 }
 
@@ -7,17 +7,19 @@
 	border : solid gray 2px;
 }
 .count {
-	font-size: 200px;
+	font-size: 100px;
 	margin: 50px;
 	color: red;
 	
 }
 
-span {
-	font-size: 200px;
+/*span {
+	font-size: 100px;
 	color: red;
 	text-align: center;
-}
-.btn {
-	text-align: center;
-}
+}*/
+ #input2 {
+ 	font-size: 50px;
+ 	width: 300px;
+ }
+
